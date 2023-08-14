@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "",
+    "build": "babel --ignore dist,public,node_modules --plugins=@babel/transform-modules-commonjs ../server -s -d dist",
+    "dev": "nodemon --exec babel-node --plugins=@babel/transform-modules-commonjs --trace-uncaught --async-stack-traces server.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +16,12 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mysql2": "^3.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/node": "^7.22.10",
+    "@babel/plugin-transform-modules-commonjs": "^7.22.5",
+    "nodemon": "^3.0.1"
   }
 }
