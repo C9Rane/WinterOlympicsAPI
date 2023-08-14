@@ -1,0 +1,1 @@
+SQL commands in the SQL files folder to re-create the database.
